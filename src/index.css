@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.border-border {
+  border-width: 0.5px;
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+.border-border:focus,
+.border-border:focus-within {
+  border-width: 2px;
+  border-color: #6c8b70; /* your desired green shade */
+  background-color: #ffffff; /* optional: keep a light background */
+}
+
