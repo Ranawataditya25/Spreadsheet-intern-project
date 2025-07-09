@@ -97,7 +97,7 @@ export default function Spreadsheet() {
       active === key ? baseHover : `hover:${baseHover}`
     }`;
 
-  const sectionClass = (key: string, base: string, hover: string) =>
+  const sectionClass = (key: string, _base: string, hover: string) =>
     `flex justify-center items-center gap-1 h-10 px-3 border border-border cursor-pointer transition-colors ${
       active === key ? hover : `hover:${hover}`
     }`;
@@ -406,7 +406,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-yellow-100 text-yellow-800"
-                tabIndex="-1"
+                
                 style={{ outline: "none", border: "none" }}
               >
                 In-process
@@ -551,7 +551,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-200 text-gray-700"
-                tabIndex="-1"
                 style={{ outline: "none", border: "none" }}
               >
                 Need to start
@@ -696,7 +695,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-yellow-100 text-yellow-800"
-                tabIndex="-1"
                 style={{ outline: "none", border: "none" }}
               >
                 In-process
@@ -841,7 +839,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-green-100 text-green-800"
-                tabIndex="-1"
                 style={{ outline: "none", border: "none" }}
               >
                 Complete
@@ -986,7 +983,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-red-100 text-red-800"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               >
                 Blocked
@@ -1131,7 +1128,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -1273,7 +1270,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -1415,7 +1412,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -1557,7 +1554,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -1845,7 +1842,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -1987,7 +1984,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -2129,7 +2126,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -2271,7 +2268,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -2413,7 +2410,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -2555,7 +2552,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -2697,7 +2694,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -2839,7 +2836,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -2981,7 +2978,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -3123,7 +3120,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -3265,7 +3262,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -3407,7 +3404,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -3549,7 +3546,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -3691,7 +3688,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -3833,7 +3830,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -3975,7 +3972,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -4117,7 +4114,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -4259,7 +4256,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -4401,7 +4398,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -4543,7 +4540,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -4685,7 +4682,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -4827,7 +4824,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -4969,7 +4966,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -5111,7 +5108,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -5253,7 +5250,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -5395,7 +5392,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -5537,7 +5534,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -5679,7 +5676,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -5821,7 +5818,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -5963,7 +5960,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -6105,7 +6102,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -6247,7 +6244,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -6389,7 +6386,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -6531,7 +6528,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -6673,7 +6670,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -6815,7 +6812,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -6957,7 +6954,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -7099,7 +7096,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -7241,7 +7238,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -7383,7 +7380,7 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                tabIndex="-1"
+                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
