@@ -17,10 +17,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      if (
-        headerRef.current &&
-        !headerRef.current.contains(e.target as Node)
-      ) {
+      if (headerRef.current && !headerRef.current.contains(e.target as Node)) {
         setActiveButton(null);
       }
     };
@@ -47,7 +44,11 @@ export default function Header() {
               : "bg-white hover:bg-gray-100"
           }`}
         >
-          <img src="https://c.animaapp.com/mclmkdkf288FZk/img/panel.svg" alt="Panel" className="w-6 h-6" />
+          <img
+            src="https://c.animaapp.com/mclmkdkf288FZk/img/panel.svg"
+            alt="Panel"
+            className="w-6 h-6"
+          />
         </button>
 
         {/* Breadcrumb */}
@@ -67,7 +68,11 @@ export default function Header() {
                   {item}
                 </a>
                 {idx < 2 && (
-                  <img src="https://c.animaapp.com/mclmkdkf288FZk/img/chevron-1.svg" alt=">" className="w-3 h-3" />
+                  <img
+                    src="https://c.animaapp.com/mclmkdkf288FZk/img/chevron-1.svg"
+                    alt=">"
+                    className="w-3 h-3"
+                  />
                 )}
               </li>
             ))}
@@ -80,7 +85,11 @@ export default function Header() {
                     : "bg-white hover:bg-gray-100"
                 }`}
               >
-                <img src="https://c.animaapp.com/mclmkdkf288FZk/img/more.svg" alt="More" className="w-5 h-5" />
+                <img
+                  src="https://c.animaapp.com/mclmkdkf288FZk/img/more.svg"
+                  alt="More"
+                  className="w-5 h-5"
+                />
               </button>
             </li>
           </ol>
@@ -92,7 +101,11 @@ export default function Header() {
         {/* Search */}
         <div className="inline-flex items-center gap-2 p-3 bg-[#f6f6f6] rounded-md">
           <div className="relative w-4 h-4">
-            <img src="https://c.animaapp.com/mclmkdkf288FZk/img/group.png" alt="Search" className="absolute w-[13px] h-[13px] top-px left-px" />
+            <img
+              src="https://c.animaapp.com/mclmkdkf288FZk/img/group.png"
+              alt="Search"
+              className="absolute w-[13px] h-[13px] top-px left-px"
+            />
           </div>
           <input
             type="text"
@@ -111,7 +124,11 @@ export default function Header() {
               : "bg-white hover:bg-gray-100"
           }`}
         >
-          <img src="https://c.animaapp.com/mclmkdkf288FZk/img/alert.svg" alt="Alert" className="w-8 h-6" />
+          <img
+            src="https://c.animaapp.com/mclmkdkf288FZk/img/alert.svg"
+            alt="Alert"
+            className="w-8 h-6"
+          />
           <div className="absolute top-0 left-5 bg-[#4b6a4f] text-xs text-white rounded-full w-5 h-5 flex items-center justify-center border-2 border-white">
             2
           </div>
@@ -135,7 +152,9 @@ export default function Header() {
           </span>
           <div className="flex flex-col text-left">
             <div className="text-xs text-[#121212]">John Doe</div>
-            <div className="text-[10px] text-[#757575] truncate">john.doe...</div>
+            <div className="text-[10px] text-[#757575] truncate">
+              john.doe...
+            </div>
           </div>
         </button>
       </div>

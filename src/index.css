@@ -1,8 +1,7 @@
 @import "tailwindcss";
 
-
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .border-border {
@@ -16,4 +15,3 @@ body {
   border-color: #6c8b70; /* your desired green shade */
   background-color: #ffffff; /* optional: keep a light background */
 }
-

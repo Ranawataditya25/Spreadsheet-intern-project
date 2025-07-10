@@ -24,11 +24,10 @@ export default function Tabs() {
     return () => document.removeEventListener("click", handleClickOutside);
   }, []);
 
-
   const getButtonClass = (name: string) =>
     activeButton === name
-      ? "bg-gray-300 text-black" 
-      : "bg-white hover:bg-gray-100"; 
+      ? "bg-gray-300 text-black"
+      : "bg-white hover:bg-gray-100";
 
   return (
     <div
@@ -38,7 +37,9 @@ export default function Tabs() {
       {/* Toolbar button */}
       <button
         onClick={() => handleButtonClick("Toolbar")}
-        className={`h-10 inline-flex items-center justify-center gap-1 p-2 rounded ${getButtonClass("Toolbar")}`}
+        className={`h-10 inline-flex items-center justify-center gap-1 p-2 rounded ${getButtonClass(
+          "Toolbar"
+        )}`}
       >
         <span>Tool bar</span>
         <img
@@ -63,7 +64,9 @@ export default function Tabs() {
           <button
             key={name}
             onClick={() => handleButtonClick(name)}
-            className={`h-10 px-4 flex items-center gap-1 rounded-md ${getButtonClass(name)}`}
+            className={`h-10 px-4 flex items-center gap-1 rounded-md ${getButtonClass(
+              name
+            )}`}
           >
             <img
               className="w-5 h-5"
@@ -87,7 +90,9 @@ export default function Tabs() {
             <button
               key={name}
               onClick={() => handleButtonClick(name)}
-              className={`h-10 px-4 flex items-center gap-1 rounded-md border border-[#eeeeee] ${getButtonClass(name)}`}
+              className={`h-10 px-4 flex items-center gap-1 rounded-md border border-[#eeeeee] ${getButtonClass(
+                name
+              )}`}
             >
               <img
                 className="w-5 h-5"

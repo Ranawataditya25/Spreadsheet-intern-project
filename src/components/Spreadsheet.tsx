@@ -73,9 +73,11 @@ export default function Spreadsheet() {
   const [activeCol, setActiveCol] = useState<string | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const tabsRef = useRef<HTMLDivElement>(null);
-  const [activeItem, setActiveItem] = useState<"overview" | "sync" | null>(null);
+  const [activeItem, setActiveItem] = useState<"overview" | "sync" | null>(
+    null
+  );
   const ref = useRef<HTMLDivElement>(null);
-    const [active, setActive] = useState<string | null>(null);
+  const [active, setActive] = useState<string | null>(null);
 
   // useEffect(() => {
   //   const handleOutsideClick = (e: MouseEvent) => {
@@ -161,159 +163,160 @@ export default function Spreadsheet() {
       style={{ height: "calc(-120px + 100vh)" }}
     >
       <div className="relative w-full">
-    <div
-      ref={ref}
-      className="absolute left-12 top-0 flex items-center h-10 gap-2 px-3 bg-[#e2e2e2] border-b border-border rounded-tl z-20"
-      style={{ minWidth: "744px" }}
-    >
-      {/* Link + Text */}
-      <div
-        onClick={() => {
-          console.log("Q3 Financial Overview clicked");
-          setActiveItem("overview");
-        }}
-        className={`flex items-center gap-1 rounded px-2 py-1 cursor-pointer transition-colors
-          ${activeItem === "overview"
-            ? "bg-[#c0c0c0]"
-            : "bg-[#eeeeee] hover:bg-[#dedede] active:bg-[#d0d0d0]"}`}
-      >
-        <img
-          className="w-4 h-4"
-          alt="Link"
-          src="https://c.animaapp.com/mclmkdkf288FZk/img/link.svg"
-        />
-        <span className="text-xs text-[#545454]">Q3 Financial Overview</span>
-      </div>
-
-      {/* Arrow Sync */}
-      <div
-        onClick={() => {
-          console.log("Arrow sync button clicked");
-          setActiveItem("sync");
-        }}
-        className={`w-6 h-6 flex items-center justify-center rounded cursor-pointer transition-colors
-          ${activeItem === "sync"
-            ? "bg-[#c0c0c0]"
-            : "hover:bg-[#dedede] active:bg-[#d0d0d0]"}`}
-      >
-        <img
-          className="w-4 h-4 text-[#545454]"
-          alt="Arrow sync"
-          src="https://c.animaapp.com/mclmkdkf288FZk/img/arrow-sync.svg"
-        />
-      </div>
-    </div>
-
-
-
-
-
-    <div
-      ref={ref}
-      className="flex w-full h-10 border-b border-border bg-white z-10"
-    >
-      <div className="w-12 h-10"></div>
-      <div className="h-10" style={{ width: "920px" }}></div>
-
-      {/* ABC */}
-      <div
-        onClick={() => handleClicked("ABC")}
-        className={sectionClass("ABC", "bg-[#e0ede2]", "bg-[#c5dbbe]")}
-        style={{ width: "176px", background: "rgb(224, 237, 226)" }}
-      >
-        <img
-          className="w-4 h-4"
-          alt="Arrow split"
-          src="https://c.animaapp.com/mclmkdkf288FZk/img/arrow-split.svg"
-        />
-        <span className="text-[#505450] text-xs font-semibold truncate">
-          ABC
-        </span>
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            handleClicked("ABC More");
-          }}
-          className={buttonClass("ABC More", "bg-[#d2e0d4]")}
+        <div
+          ref={ref}
+          className="absolute left-12 top-0 flex items-center h-10 gap-2 px-3 bg-[#e2e2e2] border-b border-border rounded-tl z-20"
+          style={{ minWidth: "744px" }}
         >
-          <img
-            className="w-4 h-4"
-            alt="More"
-            src="https://c.animaapp.com/mclmkdkf288FZk/img/more.svg"
-          />
-        </button>
-      </div>
+          {/* Link + Text */}
+          <div
+            onClick={() => {
+              console.log("Q3 Financial Overview clicked");
+              setActiveItem("overview");
+            }}
+            className={`flex items-center gap-1 rounded px-2 py-1 cursor-pointer transition-colors
+          ${
+            activeItem === "overview"
+              ? "bg-[#c0c0c0]"
+              : "bg-[#eeeeee] hover:bg-[#dedede] active:bg-[#d0d0d0]"
+          }`}
+          >
+            <img
+              className="w-4 h-4"
+              alt="Link"
+              src="https://c.animaapp.com/mclmkdkf288FZk/img/link.svg"
+            />
+            <span className="text-xs text-[#545454]">
+              Q3 Financial Overview
+            </span>
+          </div>
 
-      {/* Answer a question */}
-      <div
-        onClick={() => handleClicked("Answer")}
-        className={sectionClass("Answer", "bg-[#cfc1fa]", "bg-[#bdb1ec]")}
-        style={{ width: "352px", background: "rgb(207, 193, 250)" }}
-      >
-        <img
-          className="w-4 h-4"
-          alt="Arrow split"
-          src="https://c.animaapp.com/mclmkdkf288FZk/img/arrow-split.svg"
-        />
-        <span className="text-[#463e59] text-xs font-semibold truncate">
-          Answer a question
-        </span>
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            handleClicked("Answer More");
-          }}
-          className={buttonClass("Answer More", "bg-[#cfc1fa]")}
+          {/* Arrow Sync */}
+          <div
+            onClick={() => {
+              console.log("Arrow sync button clicked");
+              setActiveItem("sync");
+            }}
+            className={`w-6 h-6 flex items-center justify-center rounded cursor-pointer transition-colors
+          ${
+            activeItem === "sync"
+              ? "bg-[#c0c0c0]"
+              : "hover:bg-[#dedede] active:bg-[#d0d0d0]"
+          }`}
+          >
+            <img
+              className="w-4 h-4 text-[#545454]"
+              alt="Arrow sync"
+              src="https://c.animaapp.com/mclmkdkf288FZk/img/arrow-sync.svg"
+            />
+          </div>
+        </div>
+
+        <div
+          ref={ref}
+          className="flex w-full h-10 border-b border-border bg-white z-10"
         >
-          <img
-            className="w-4 h-4"
-            alt="More"
-            src="https://c.animaapp.com/mclmkdkf288FZk/img/more.svg"
-          />
-        </button>
-      </div>
+          <div className="w-12 h-10"></div>
+          <div className="h-10" style={{ width: "920px" }}></div>
 
-      {/* Extract */}
-      <div
-        onClick={() => handleClicked("Extract")}
-        className={sectionClass("Extract", "bg-[#ffd6c9]", "bg-[#ffcbb8]")}
-        style={{ width: "176px", background: "rgb(255, 214, 201)" }}
-      >
-        <img
-          className="w-4 h-4"
-          alt="Arrow split"
-          src="https://c.animaapp.com/mclmkdkf288FZk/img/arrow-split.svg"
-        />
-        <span className="text-[#695149] text-xs font-semibold truncate">
-          Extract
-        </span>
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            handleClicked("Extract More");
-          }}
-          className={buttonClass("Extract More", "bg-[#ffd6c9]")}
-        >
-          <img
-            className="w-4 h-4"
-            alt="More"
-            src="https://c.animaapp.com/mclmkdkf288FZk/img/more.svg"
-          />
-        </button>
-      </div>
+          {/* ABC */}
+          <div
+            onClick={() => handleClicked("ABC")}
+            className={sectionClass("ABC", "bg-[#e0ede2]", "bg-[#c5dbbe]")}
+            style={{ width: "176px", background: "rgb(224, 237, 226)" }}
+          >
+            <img
+              className="w-4 h-4"
+              alt="Arrow split"
+              src="https://c.animaapp.com/mclmkdkf288FZk/img/arrow-split.svg"
+            />
+            <span className="text-[#505450] text-xs font-semibold truncate">
+              ABC
+            </span>
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                handleClicked("ABC More");
+              }}
+              className={buttonClass("ABC More", "bg-[#d2e0d4]")}
+            >
+              <img
+                className="w-4 h-4"
+                alt="More"
+                src="https://c.animaapp.com/mclmkdkf288FZk/img/more.svg"
+              />
+            </button>
+          </div>
 
-      {/* Plus */}
-      <div
-        onClick={() => handleClicked("Plus")}
-        className={`flex items-center justify-center h-10 px-3 border border-border cursor-pointer transition-colors ${
-          active === "Plus" ? "bg-[#d5d5d5]" : "hover:bg-[#f0f0f0]"
-        }`}
-        style={{ width: "176px", background: "#eeeeee" }}
-      >
-        +
-      </div>
-    </div>
+          {/* Answer a question */}
+          <div
+            onClick={() => handleClicked("Answer")}
+            className={sectionClass("Answer", "bg-[#cfc1fa]", "bg-[#bdb1ec]")}
+            style={{ width: "352px", background: "rgb(207, 193, 250)" }}
+          >
+            <img
+              className="w-4 h-4"
+              alt="Arrow split"
+              src="https://c.animaapp.com/mclmkdkf288FZk/img/arrow-split.svg"
+            />
+            <span className="text-[#463e59] text-xs font-semibold truncate">
+              Answer a question
+            </span>
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                handleClicked("Answer More");
+              }}
+              className={buttonClass("Answer More", "bg-[#cfc1fa]")}
+            >
+              <img
+                className="w-4 h-4"
+                alt="More"
+                src="https://c.animaapp.com/mclmkdkf288FZk/img/more.svg"
+              />
+            </button>
+          </div>
 
+          {/* Extract */}
+          <div
+            onClick={() => handleClicked("Extract")}
+            className={sectionClass("Extract", "bg-[#ffd6c9]", "bg-[#ffcbb8]")}
+            style={{ width: "176px", background: "rgb(255, 214, 201)" }}
+          >
+            <img
+              className="w-4 h-4"
+              alt="Arrow split"
+              src="https://c.animaapp.com/mclmkdkf288FZk/img/arrow-split.svg"
+            />
+            <span className="text-[#695149] text-xs font-semibold truncate">
+              Extract
+            </span>
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                handleClicked("Extract More");
+              }}
+              className={buttonClass("Extract More", "bg-[#ffd6c9]")}
+            >
+              <img
+                className="w-4 h-4"
+                alt="More"
+                src="https://c.animaapp.com/mclmkdkf288FZk/img/more.svg"
+              />
+            </button>
+          </div>
+
+          {/* Plus */}
+          <div
+            onClick={() => handleClicked("Plus")}
+            className={`flex items-center justify-center h-10 px-3 border border-border cursor-pointer transition-colors ${
+              active === "Plus" ? "bg-[#d5d5d5]" : "hover:bg-[#f0f0f0]"
+            }`}
+            style={{ width: "176px", background: "#eeeeee" }}
+          >
+            +
+          </div>
+        </div>
       </div>
 
       <div
@@ -406,7 +409,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-yellow-100 text-yellow-800"
-                
                 style={{ outline: "none", border: "none" }}
               >
                 In-process
@@ -983,7 +985,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-red-100 text-red-800"
-                 
                 style={{ outline: "none", border: "none" }}
               >
                 Blocked
@@ -1128,7 +1129,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -1270,7 +1270,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -1412,7 +1411,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -1554,7 +1552,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -1842,7 +1839,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -1984,7 +1980,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -2126,7 +2121,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -2268,7 +2262,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -2410,7 +2403,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -2552,7 +2544,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -2694,7 +2685,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -2836,7 +2826,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -2978,7 +2967,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -3120,7 +3108,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -3262,7 +3249,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -3404,7 +3390,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -3546,7 +3531,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -3688,7 +3672,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -3830,7 +3813,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -3972,7 +3954,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -4114,7 +4095,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -4256,7 +4236,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -4398,7 +4377,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -4540,7 +4518,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -4682,7 +4659,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -4824,7 +4800,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -4966,7 +4941,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -5108,7 +5082,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -5250,7 +5223,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -5392,7 +5364,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -5534,7 +5505,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -5676,7 +5646,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -5818,7 +5787,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -5960,7 +5928,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -6102,7 +6069,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -6244,7 +6210,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -6386,7 +6351,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -6528,7 +6492,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -6670,7 +6633,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -6812,7 +6774,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -6954,7 +6915,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -7096,7 +7056,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -7238,7 +7197,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
@@ -7380,7 +7338,6 @@ export default function Spreadsheet() {
             >
               <button
                 className="px-2 py-1 rounded-full text-xs font-medium cursor-pointer bg-gray-50 text-gray-700"
-                 
                 style={{ outline: "none", border: "none" }}
               ></button>
             </div>
